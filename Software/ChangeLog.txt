@@ -1,0 +1,175 @@
+
+===============================================================================
+   C H A N G E   L O G  -   m i n i E n g i n e
+===============================================================================
+
+=====  v1.1  ===  2012-05-06  =================================================
+
+-	added 2 new ramping types -> now 3 motor ramping types 
+	(which is bes used can be changed in the code)
+	main file line 133) 
+	> ARCTAN (new default - much smoother)
+	> LINEAR
+	> SINUS
+- 	added limit switch checks to the motor phases (every 150ms)
+-	added check for SELECT key to the motor phases (motor phases are no longer
+	blocking)
+
+=====  v1.00 ===  2012-03-22  =================================================
+
+-	fixed a bug with minimum values (backlight time = zero problem)
+
+
+=====  v0.12 ===  2012-02-13  =================================================
+
+-	fixed a bug in the menu navigation
+-	fixed a bug that if on system-time-screen the time is now updated 
+	automatically
+- 	changed the ramping algorithm - ramping is now much smoother 
+
+=====  v0.11 ===  2012-02-12  =================================================
+
+-	fixed a bug in the menu navigation - in some cases one were
+	not able to move away from the main status screen
+-	optimized key values (analogue values) for more precise key readings 
+
+
+=====  v0.10 ===  2012-01-06  =================================================
+
+-	Upgraded MiniE to be compatible with Arduino 1.0
+-	Fixed link to new Arduino 1.0 jeelabs RTC Lib 
+- 	Extended limit switch slightly where it will reverse the motor and
+  	run one load of steps in the reverse direction to stop limit switch
+- 	Lowered the detection for the limit switches (from 1023 to more than 1000)
+- 	Reduced strings used to lower sketch size, Arduino 1.0 ended up blowing
+  	the size out by 200bytes, pushign it over the UNO & ATMega328p limit
+- 	Created new function to fill out menus to reduce code size (Could still be
+  	extended to include other menus)
+
+
+=====  v0.9 ===  2011-10-09  ==================================================
+
+-	Added documentation for v0.9
+
+
+=====  v0.9 ===  2011-09-21  ==================================================
+
+-	Added units to the different setting-screens
+-	Menu positions are now saved. When you go back in a menu, the focus is
+	placed on the item you were at before
+-	Added two 1k resistors to the two limit switch pins to generate clear
+	signals (see circuit diagram for more details) and avoid unwanted
+	limit-switch-triggerings
+-	Added the possibility to enable/disable limit switches in the software	
+-	Added the possibility to set min and max motor speeds (step delays:
+	big delay = slow; short delay = fast)
+-  	Fixed the issue that focus line did not close after program end and 
+	during motor home movement
+
+
+=====  v0.8.1 ===  2011-09-14  ================================================
+
+-	Minor bugfix (system time editor)
+
+
+=====  v0.8 ===  2011-09-13  ==================================================
+
+-	The "P" for existing programs on the main screen is now only
+	displayed if there are programs that will become active in the future.
+	(smart "P")
+-	Added a motor post delay
+-	The system time is now editable
+-	Updated copyright information
+-	Fixed an issue that led the engine to heavy lagging while starting and
+	stopping the continuous mode
+-	Fixed a bug that crashed the engine in continuous mode after a limit
+	switch event
+
+
+=====  v0.7 ===  2011-09-07  ==================================================
+
+-	Continuous mode is now 100% precise
+-	Cycle length can now be adjusted in 0.5 second steps
+-	Fixed a bug in motor-home counting
+-	Fixed crashed motor ramping from version 0.6
+
+
+=====  v0.6 ===  2011-09-06  ==================================================
+
+-	Extensive optimisations of the UI code regarding RAM usage
+-	Added RTC functionality
+-	Added the possibility to create up to 30 programs
+	(single date programs, repeating weekday programs)
+-	Programs can be saved / autosaved together with the settings
+-	Deleted "load settings" (useless because settings are automatically 
+	loaded during boot)
+-	Added "reset settings" functionality. This resets all settings to
+	factory default and deletes all programs.
+-	Added message system to allow pop-up screen messages
+-	Bugfix of a limit switch error that allowed one more cycle with triggered
+	limit switch when restarting the engine
+-	Minor bugfixes, code- and usability optimisations	
+
+
+=====  v0.5 ===  2011-08-29  ==================================================
+
+-	Fixed the motor pin error (exchanged pin 12 & 13 to fit the circuit 
+	diagram)
+-	added EEPROM functionality for saving and restoring all settings
+-	Optimized menu code (in preparation for the RTC-program feature coming)
+-	Added max shot limit
+-	Added max motor step limit (counting from motor home)
+-	Added backlight control features (duration and brightness)
+- 	Minor bugfixes
+-	Moved limit switch pins to analog pins 3 and 4
+
+
+=====  v0.4 ===  2011-08-26  ==================================================
+
+-	Minor code optimizations
+-	Optimized long-key-press speed up
+-	Added limiting switches check to analog pins 4 and 5. 
+	When connected to 5V the program stopps
+-	Added the motor-home counter for the continuous mode - motor home now
+	works in continuous mode too
+-	The number of shoots done now stays displayed after the program stopped
+-	Fixed an error in home counting in shoot-move-shoot mode
+
+
+=====  v0.3  ===  2011-08-19  ==================================================
+
+-	Changed the default value for focus line behavior to low with shutter
+-	Implemented motor sleep functionality (new menu entry in "Motor")
+	(motor is always in sleep while program stopped)
+-	Added resistors in front of the optocouplers and updated the circuit
+	diagram	
+
+
+=====  v0.2  ===  2011-08-18  ==================================================
+
+-	Camera focus was implemented and is executed before the
+	camera exposes (new menu entry under "Camera")
+-	"Focus behavior" was implemented. This is setting the behavior
+	of the focus line while exposing (high or low) (new menu
+	entry in "Camera")
+-	Added a little documentation describing "the cycle" of miniE			
+
+
+=====  v0.1  ===  2011-07-06  ==================================================
+
+First version with the following features:
+
+-	Arduino (ATMega) based Motion Control system 
+	for use with the DFRobot LCD Shield
+-	System control is fully implemented as a 5 button - 
+	16x2 char GUI
+-	Supports 1 stepper motor
+-	Supports 1 camera
+-	Shoot-move-shoot mode 
+-	continuous mode (needs to be improved)
+-	Sinus shaped motor ramping (up to 32 mio steps)
+-	Auto backlight-off after 15 seconds 
+	(still hard wired in the code)
+- 	Motor home (for shoot-move-shoot mode)
+-	Exposure post delay
+			

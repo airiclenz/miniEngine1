@@ -1,0 +1,52 @@
+
+
+miniE shield - version 1.2 - part list
+2012 by Airic Lenz
+
+
+===================================================================================
+PART                   VALUE / TYPE           PACKAGE                 
+===================================================================================
+CAM                    2.5MM HEADPHONE JACK   DigiKey PartNo.: CP1-2503A-ND                   
+LSW	                   TERMINAL               Terminal-1x3 (2.54mm pitch)       
+OK1                    4N35                   DIL06 OPTOCOUPLER                     
+OK2                    4N35                   DIL06 OPTOCOUPLER                     
+R1                     470~510 Ohm            RESISTOR 0207/10                     
+R2                     470~510 Ohm            RESISTOR 0207/10                    
+R3                     10k~20k Ohm            RESISTOR 0207/10                     
+R4                     10k~20k Ohm            RESISTOR 0207/10                     
+EASYDRIVER v4.4        -                      EASYDRIVER V4.4              
+MOTOR                  4C4C PHONE JACK        DigiKey PartNo.: AE10381-ND	
+         
+                   
+
+
+OPTIONAL:
+===================================================================================
+PART                   VALUE / TYPE           PACKAGE                 
+===================================================================================
+
+S-DY1                  12V 0.2A               DIODE schottky/zener (bridged by default)            
+S-DY2                  12V 0.2A               DIODE schottky/zener (bridged by default)        
+
+
+If no EasyDriver should be used:
+-----------------------------------------------------------------------------------
+( MOTOR ) CONTROL      TERMINAL               Terminal-1x3 (2.54mm pitch)		
+( MOTOR ) POWER        TERMINAL               Terminal-1x2 (2.54mm pitch)                        
+
+
+If the camera should be triggered via infrared-LED:
+-----------------------------------------------------------------------------------
+IR                     TERMINAL               Terminal-1X3 (2.54mm pitch)
+
+
+
+If you want to use scheduled programs:
+(see http://www.sparkfun.com/products/99 for the used module)
+-----------------------------------------------------------------------------------
+RTC MODULE             DS1307                 SPARKFUN RTC MODULE (BOB-00099)
+
+                         
+
+             

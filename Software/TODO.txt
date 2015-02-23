@@ -1,0 +1,31 @@
+
+TODO
+
+[ ] change limit switch behaviour from default low to default high if possible
+
+[ ] Implement better limit-switch-event-protocol:
+		1. Limit switch detected
+		2. Pause for a moment (configurable?)
+		3. Reverse at say 1/2 the forward speed (or the minimum speed) until the limit 
+		   switch is released (i.e JUST far enough for the limit switch not to 
+		   be operated). 
+
+[ ] add #defines which are used to set the drivers specific motor awake or asleep states
+	(e.g. sleep = high; awake = low)
+	
+[ ] add manual clear / auto clear behavior (of the shots taken)
+
+[ ] it would be nice to use max steps and the cycle time to show a 
+	calculation of the time to traverse the entire rail.	
+	
+[ ]	Jog function
+
+[ ]	Add help screens "behind" the action screens describing
+	the related function (only if there is flash memory left)
+  		
+[ ] Tidy up other menu LCD creation steps.
+
+[ ] Move to end (till limit switch).
+
+[ ] Fit IR trigger code in
+ 
