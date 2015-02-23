@@ -2,7 +2,7 @@
 
     See www.openmoco.org for more information
      
-    (c) 2011 Airic Lenz
+    2015 Airic Lenz
      
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

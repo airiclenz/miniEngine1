@@ -2,7 +2,7 @@
 
     See www.openmoco.org for more information
 
-    (c) 2011 Airic Lenz, C.A. Church
+    2015 Airic Lenz, C.A. Church
     
     The 1st version of this code, dealing with core functionalities, 
     was heavily inspired by the OpenMoCo Engine by C.A. Church
