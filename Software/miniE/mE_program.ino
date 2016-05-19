@@ -121,7 +121,7 @@ void delete_program() {
     } else {
       
       // do for all programs behind the current program
-      for (byte p=current_program; p<(program_count-1); p++) {
+      for (byte p=current_program; p<(program_count-1); p++) {
       
          program_weekdays[p] = program_weekdays[p+1];
          program_datetime[p] = program_datetime[p+1];

@@ -66,7 +66,7 @@ int lcd_key_pressed() {
   // this calculation gives the button a slight range to allow for a little contact resistance noise.
   // it double checks the keypress. If the two readings are not equal +/-k value after debounce delay, 
   // it tries again. if (adc_key_in > 760)  return btnNONE;  
-  if (5 < abs(analogRead(LCD_KEY_PIN) - analogValue)) { 
+  if (5 < abs(analogRead(LCD_KEY_PIN) - analogValue)) {
     
     return KEY_NONE;
   } 

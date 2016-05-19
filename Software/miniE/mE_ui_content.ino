@@ -164,7 +164,7 @@ void paint_status_screen() {
   
   // Program available
   if  ( (ui_status & B01000000) || // repaint flag
-        (program_count_old != program_count) || 
+        (program_count_old != program_count) ||
         (clock_seconds_old != time.second())) {
     
     program_count_old = program_count;
@@ -296,7 +296,7 @@ void fill_screen_array() {
         
         if (program_weekdays[i] & B10000000) { strcpy(temp, "M"); } 
         else { strcpy(temp, "_"); }
-        if (program_weekdays[i] & B01000000) { strcat(temp, "T"); } 
+        if (program_weekdays[i] & B01000000) { strcat(temp, "T"); }
         else { strcat(temp, "_"); }
         if (program_weekdays[i] & B00100000) { strcat(temp, "W"); } 
         else { strcat(temp, "_"); }
@@ -1509,7 +1509,7 @@ void paint_status_program_weekdays() {
   // paint the new data
   lcd.setCursor(0,1);
   if (program_weekdays[current_program] & B10000000) { lcd.print("x"); } 
-  else { lcd.print("_"); }
+  else { lcd.print("_"); }
   lcd.setCursor(2,1);
   if (program_weekdays[current_program] & B01000000) { lcd.print("x"); } 
   else { lcd.print("_"); }
