@@ -4,6 +4,9 @@
 ===============================================================================
 
 
+=====  v1.2a  ===  2019-05-07  ================================================
+
+-	Adaption to the latest Arduinio SDK version
 
 =====  v1.2  ===  2015-02-23  =================================================
 
@@ -12,9 +15,9 @@
 
 =====  v1.1  ===  2012-05-06  =================================================
 
--	added 2 new ramping types -> now 3 motor ramping types 
+-	added 2 new ramping types -> now 3 motor ramping types
 	(which is bes used can be changed in the code)
-	main file line 133) 
+	main file line 133)
 	> ARCTAN (new default - much smoother)
 	> LINEAR
 	> SINUS
@@ -30,21 +33,21 @@
 =====  v0.12 ===  2012-02-13  =================================================
 
 -	fixed a bug in the menu navigation
--	fixed a bug that if on system-time-screen the time is now updated 
+-	fixed a bug that if on system-time-screen the time is now updated
 	automatically
-- 	changed the ramping algorithm - ramping is now much smoother 
+- 	changed the ramping algorithm - ramping is now much smoother
 
 =====  v0.11 ===  2012-02-12  =================================================
 
 -	fixed a bug in the menu navigation - in some cases one were
 	not able to move away from the main status screen
--	optimized key values (analogue values) for more precise key readings 
+-	optimized key values (analogue values) for more precise key readings
 
 
 =====  v0.10 ===  2012-01-06  =================================================
 
 -	Upgraded MiniE to be compatible with Arduino 1.0
--	Fixed link to new Arduino 1.0 jeelabs RTC Lib 
+-	Fixed link to new Arduino 1.0 jeelabs RTC Lib
 - 	Extended limit switch slightly where it will reverse the motor and
   	run one load of steps in the reverse direction to stop limit switch
 - 	Lowered the detection for the limit switches (from 1023 to more than 1000)
@@ -67,10 +70,10 @@
 -	Added two 1k resistors to the two limit switch pins to generate clear
 	signals (see circuit diagram for more details) and avoid unwanted
 	limit-switch-triggerings
--	Added the possibility to enable/disable limit switches in the software	
+-	Added the possibility to enable/disable limit switches in the software
 -	Added the possibility to set min and max motor speeds (step delays:
 	big delay = slow; short delay = fast)
--  	Fixed the issue that focus line did not close after program end and 
+-  	Fixed the issue that focus line did not close after program end and
 	during motor home movement
 
 
@@ -108,19 +111,19 @@
 -	Added the possibility to create up to 30 programs
 	(single date programs, repeating weekday programs)
 -	Programs can be saved / autosaved together with the settings
--	Deleted "load settings" (useless because settings are automatically 
+-	Deleted "load settings" (useless because settings are automatically
 	loaded during boot)
 -	Added "reset settings" functionality. This resets all settings to
 	factory default and deletes all programs.
 -	Added message system to allow pop-up screen messages
 -	Bugfix of a limit switch error that allowed one more cycle with triggered
 	limit switch when restarting the engine
--	Minor bugfixes, code- and usability optimisations	
+-	Minor bugfixes, code- and usability optimisations
 
 
 =====  v0.5 ===  2011-08-29  ==================================================
 
--	Fixed the motor pin error (exchanged pin 12 & 13 to fit the circuit 
+-	Fixed the motor pin error (exchanged pin 12 & 13 to fit the circuit
 	diagram)
 -	added EEPROM functionality for saving and restoring all settings
 -	Optimized menu code (in preparation for the RTC-program feature coming)
@@ -135,7 +138,7 @@
 
 -	Minor code optimizations
 -	Optimized long-key-press speed up
--	Added limiting switches check to analog pins 4 and 5. 
+-	Added limiting switches check to analog pins 4 and 5.
 	When connected to 5V the program stopps
 -	Added the motor-home counter for the continuous mode - motor home now
 	works in continuous mode too
@@ -149,7 +152,7 @@
 -	Implemented motor sleep functionality (new menu entry in "Motor")
 	(motor is always in sleep while program stopped)
 -	Added resistors in front of the optocouplers and updated the circuit
-	diagram	
+	diagram
 
 
 =====  v0.2  ===  2011-08-18  ==================================================
@@ -159,24 +162,23 @@
 -	"Focus behavior" was implemented. This is setting the behavior
 	of the focus line while exposing (high or low) (new menu
 	entry in "Camera")
--	Added a little documentation describing "the cycle" of miniE			
+-	Added a little documentation describing "the cycle" of miniE
 
 
 =====  v0.1  ===  2011-07-06  ==================================================
 
 First version with the following features:
 
--	Arduino (ATMega) based Motion Control system 
+-	Arduino (ATMega) based Motion Control system
 	for use with the DFRobot LCD Shield
--	System control is fully implemented as a 5 button - 
+-	System control is fully implemented as a 5 button -
 	16x2 char GUI
 -	Supports 1 stepper motor
 -	Supports 1 camera
--	Shoot-move-shoot mode 
+-	Shoot-move-shoot mode
 -	continuous mode (needs to be improved)
 -	Sinus shaped motor ramping (up to 32 mio steps)
--	Auto backlight-off after 15 seconds 
+-	Auto backlight-off after 15 seconds
 	(still hard wired in the code)
 - 	Motor home (for shoot-move-shoot mode)
 -	Exposure post delay
-			
